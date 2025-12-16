@@ -157,6 +157,14 @@ article h2{
   width: 40px;
   border: 2px solid var(--fundo-card);
   outline: 2px solid var( --texto);
+
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+img.imgskill:hover{ 
+  cursor: pointer;
+   transform: rotateY(180deg);
 }
 
 #skill-conteiner .porcent{  
@@ -177,12 +185,16 @@ article h2{
 }
 
 
+
+
 @media screen and (min-width: 768px){ 
     #skill-conteiner { 
       grid-template-columns: 1fr 1fr ;
 
     }
     article#skills h2{ 
-      padding-left: 20%;
+      text-align: center;
+      font-size: 30px;
+      padding-bottom: 50px;
     }
 }
