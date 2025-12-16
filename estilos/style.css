@@ -75,7 +75,7 @@ section#ficha{
   
   
 }
-section img{
+section img#foto{
     width: 200px;
     aspect-ratio: 1/1;
     object-fit: cover;
@@ -132,4 +132,57 @@ article{
 article h2{ 
   color: var(--destaque);
   margin-bottom: 20px;
+  
+}
+
+#skill-conteiner{ 
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+
+#skill-conteiner .infor{ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#skill-conteiner .nome{ 
+  font-weight: bold;
+  color: var(--texto);
+}
+ img.imgskill{  
+  border-radius: 30%;
+  width: 40px;
+  border: 2px solid var(--fundo-card);
+  outline: 2px solid var( --texto);
+}
+
+#skill-conteiner .porcent{  
+   color: var(--destaque);
+   font-weight: bold;
+}
+
+#skill-conteiner .barra{  
+  width: 100%;
+  height: 8px;
+  background-color: var(--fundo-principal);
+  border-radius: 4px;
+}
+#skill-conteiner .progress{ 
+  height: 100%;
+  background-color: var(--destaque-inverso);
+  border-radius: 4px;
+}
+
+
+@media screen and (min-width: 768px){ 
+    #skill-conteiner { 
+      grid-template-columns: 1fr 1fr ;
+
+    }
+    article#skills h2{ 
+      padding-left: 20%;
+    }
 }
