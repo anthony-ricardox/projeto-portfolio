@@ -184,6 +184,39 @@ img.imgskill:hover{
   border-radius: 4px;
 }
 
+div#formacao-conteiner{ 
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+div.cursos{  
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  background-color: var(--fundo-principal);
+  padding-left: 10px;
+  
+  transition: border-left-width 0.3s ,border-color 1s;
+}
+div.cursos:hover{ 
+  border-left-width: 15px;
+  border-color: var(--destaque);
+  cursor: pointer;
+}
+
+p.periodo{ 
+  font-weight: bold;
+  font-size: 0.8em;
+  
+}
+
+h3.instituicao{ 
+  color: var(--destaque-inverso);
+  font-size: 1.1em;
+}
+
+
+
 
 
 
