@@ -216,9 +216,56 @@ h3.instituicao{
 }
 
 
+/*-------PROJETOS--------------*/
 
+article div#projeto-conteiner{  
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
 
+div#projeto-conteiner .projeto{  
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  padding: 10px;
+  background-color: var(--fundo-principal);
+  border-radius: 10px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-left-width 0.3s, border-color 1s;
 
+}
+
+#projeto-conteiner .projeto:hover{ 
+  border-left-width: 15px;
+  border-color: #0077ff;
+  cursor: pointer;
+}
+
+.projeto .foto{  
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+footer{ 
+  background-color: var(--destaque);
+  padding: 10px;
+  color: var(--texto-inverso);
+  text-align: center;
+}
+footer a{ 
+  text-decoration: none;
+  color: var(--texto-inverso);
+  font-weight: bold;
+}
+
+footer a:hover{ 
+  color: var(--destaque-inverso);
+  text-decoration: underline;
+}
 
 @media screen and (min-width: 768px){ 
     #skill-conteiner { 
@@ -230,4 +277,18 @@ h3.instituicao{
       font-size: 30px;
       padding-bottom: 50px;
     }
+    #projeto-conteiner div.projeto{ 
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    #projeto-conteiner .projeto-infor{ 
+      max-width: 70%;
+    }
+    div.projeto .foto{  
+      aspect-ratio: 1/1;
+      max-width: 30%;
+      max-height: 200px;
+    }
+
 }
