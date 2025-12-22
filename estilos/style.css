@@ -129,7 +129,7 @@ article{
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.493);
+ 
 }
 article h2{ 
   color: var(--destaque);
@@ -270,6 +270,20 @@ footer a:hover{
 }
 
 @media screen and (min-width: 768px){ 
+
+  main { 
+    grid-template-columns: auto 300px 1fr auto;
+  }
+  section#ficha{  
+      grid-column: 2/3;
+      height: fit-content;
+      position: sticky;
+      top: 80px;
+  }
+  
+  section#detalhes{ 
+    grid-column: 3/4;
+  }
     #skill-conteiner { 
       grid-template-columns: 1fr 1fr ;
 
