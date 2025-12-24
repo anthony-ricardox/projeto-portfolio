@@ -87,7 +87,18 @@ section#ficha{
   grid-column: 2;
   padding: 20px;
   
+
   
+  
+}
+#fundo{ 
+  background-image: url('../imagens/fundo.cod.jpg');
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+  height: 230px;
+  padding-top: 1px;
+
 }
 section img#foto{
     width: 200px;
