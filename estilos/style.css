@@ -243,13 +243,13 @@ h3.instituicao{
 
 /*-------PROJETOS--------------*/
 
-article div#projeto-conteiner{  
+article div#projeto-conteiner, div.projeto-pessoal{  
   display: flex;
   flex-direction: column-reverse;
   gap: 20px;
 }
 
-div#projeto-conteiner .projeto{  
+div#projeto-conteiner .projeto, div.projeto-pessoal{  
   display: flex;
   flex-direction: column;
   gap:15px;
@@ -261,19 +261,21 @@ div#projeto-conteiner .projeto{
 
 }
 
-#projeto-conteiner .projeto:hover{ 
+#projeto-conteiner .projeto:hover, div.projeto-pessoal:hover{ 
   border-left-width: 15px;
   border-color: var(--destaque);
   cursor: pointer;
 }
 
-.projeto .foto{  
+.projeto .foto, .pjfoto{  
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 10px;
   overflow: hidden;
 }
+
+
 
 footer{ 
   background-color: var(--destaque);
@@ -316,7 +318,7 @@ footer a:hover{
       font-size: 30px;
       padding-bottom: 50px;
     }
-    #projeto-conteiner div.projeto{ 
+    #projeto-conteiner div.projeto,div.projeto-pessoal{ 
       flex-direction: row-reverse;
       justify-content: space-between;
     }
@@ -324,7 +326,7 @@ footer a:hover{
     #projeto-conteiner .projeto-infor{ 
       max-width: 70%;
     }
-    div.projeto .foto{  
+    div.projeto .foto,.pjfoto{  
       aspect-ratio: 1/1;
       max-width: 30%;
       max-height: 200px;
