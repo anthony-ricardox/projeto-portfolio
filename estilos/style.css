@@ -21,6 +21,8 @@
   --destaque: #0077ff;
   --destaque-inverso: #66bbff;
   --fundo-card: #ffffff;
+    --electric: #7df9ff;
+    --bg-card: #0b0f1a;
 }
 
 body.escuro{  
@@ -274,6 +276,77 @@ div#projeto-conteiner .projeto, div.projeto-pessoal{
   border-radius: 10px;
   overflow: hidden;
 }
+
+.projeto, .projeto-pessoal {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glare */
+.projeto::before, .projeto-pessoal::before{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+
+  width: 45%;
+  height: 200%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: rotate(25deg);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+/* Ativa no hover */
+.projeto:hover::before, .projeto-pessoal:hover::before{
+  left: 130%;
+}
+
+
+
+/* ACESSAR LINKS    */
+
+.plink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  
+
+  width: fit-content;
+  padding: 8px 18px;
+
+  background-color: transparent;
+  border: 2px solid var(--destaque);
+  border-radius: 20px;
+
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.plink a {
+  text-decoration: none;
+  color: var(--destaque);
+  font-weight: 600;
+  
+}
+
+.plink:hover {
+  background-color: var(--destaque);
+  transform: translateY(-2px);
+}
+
+.plink:hover a {
+  color: #fff;
+}
+
+/*-----FIMMM-------*/
 
 
 
