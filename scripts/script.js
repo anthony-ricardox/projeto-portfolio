@@ -41,5 +41,3 @@ navLinks.forEach(link => {
 });
 
 
-
-

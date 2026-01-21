@@ -161,6 +161,59 @@ article h2{
   margin-bottom: 20px;
   
 }
+/*------- SKILLS----*/
+
+.nome {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip */
+.nome::after {
+  content: attr(data-tech);
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 10;
+}
+
+/* Seta */
+.nome::before {
+  content: "";
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border: 6px solid transparent;
+  border-top-color: var(--destaque);
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Hover */
+.nome:hover::after,
+.nome:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+
+
 
 #skill-conteiner{ 
   display: grid;
@@ -180,6 +233,10 @@ article h2{
   color: var(--texto);
 }
  img.imgskill{  
+  position: relative;
+
+
+
   border-radius: 30%;
   width: 40px;
   border: 2px solid var(--fundo-card);
@@ -263,6 +320,16 @@ div#projeto-conteiner .projeto, div.projeto-pessoal{
 
 }
 
+p.br{ 
+  padding-bottom: 10px;
+ 
+}
+hr{ 
+  width: 400px;
+  border-radius: 8px;
+  border: 1px solid var(--destaque);
+}
+
 #projeto-conteiner .projeto:hover, div.projeto-pessoal:hover{ 
   border-left-width: 15px;
   border-color: var(--destaque);
@@ -318,7 +385,7 @@ div#projeto-conteiner .projeto, div.projeto-pessoal{
   justify-content: center;
   align-items: center;
   margin: auto;
-  
+  margin-top: 10px;
 
   width: fit-content;
   padding: 8px 18px;
