@@ -422,6 +422,10 @@ hr{
   color: #fff;
 }
 
+summary:hover{  
+   color: var(--destaque);
+}
+
 /*-----FIMMM-------*/
 
 
