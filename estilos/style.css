@@ -416,6 +416,7 @@ hr{
 .plink:hover {
   background-color: var(--destaque);
   transform: translateY(-2px);
+  
 }
 
 .plink:hover a {
